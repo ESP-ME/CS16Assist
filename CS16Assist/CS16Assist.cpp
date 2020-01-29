@@ -62,7 +62,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	} else {
 		strcat(path, "\\");
 		strcat(path, data.name);
-		MessageBox(NULL, path, "提示", MB_OK);
+		//MessageBox(NULL, path, "提示", MB_OK);
 	}
 #endif
 

@@ -1,7 +1,11 @@
 ﻿  stdafx.cpp
+  UIControlVal.cpp
   dllmain.cpp
+  HookThread.cpp
   InjectedDll.cpp
+  Spirit.cpp
+  UIThread.cpp
   正在生成代码
-  All 6 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  All 184 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   已完成代码的生成
   InjectedDll.vcxproj -> D:\VS 2017\CS16Assist\Release\InjectedDll.dll

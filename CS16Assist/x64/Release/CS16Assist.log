@@ -1,0 +1,15 @@
+﻿D:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(402,5): warning MSB8038: 已启用 Spectre 缓解，但找不到 Spectre 缓解库。验证 Visual Studio 工作负荷包括 Spectre 缓解库。有关详细信息，请参阅 https://aka.ms/Ofhn4c。
+  stdafx.cpp
+  CS16Assist.cpp
+d:\vs 2017\cs16assist\cs16assist\cs16assist.cpp(58): warning C4244: “初始化”: 从“intptr_t”转换到“long”，可能丢失数据
+d:\vs 2017\cs16assist\cs16assist\cs16assist.cpp(63): error C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+d:\vs 2017\cs16assist\cs16assist\cs16assist.cpp(64): error C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+  InjectDll.cpp
+d:\vs 2017\cs16assist\cs16assist\injectdll.cpp(174): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“SIZE_T”
+  d:\vs 2017\cs16assist\cs16assist\injectdll.cpp(174): note: 请考虑在格式字符串中使用“%lld”
+  d:\vs 2017\cs16assist\cs16assist\injectdll.cpp(174): note: 请考虑在格式字符串中使用“%Id”
+  d:\vs 2017\cs16assist\cs16assist\injectdll.cpp(174): note: 请考虑在格式字符串中使用“%I64d”
+d:\vs 2017\cs16assist\cs16assist\injectdll.cpp(240): warning C4311: “类型强制转换”: 从“HANDLE”到“DWORD”的指针截断
+d:\vs 2017\cs16assist\cs16assist\injectdll.cpp(240): warning C4302: “类型强制转换”: 从“HANDLE”到“DWORD”截断
