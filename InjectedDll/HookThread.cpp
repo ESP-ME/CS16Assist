@@ -98,6 +98,7 @@ DWORD WINAPI HookThreadFunc(LPVOID lpPatameter) {
 	while (isRunHookThread) {
 		BOOL isCheckInfiniteBullet = controlVal.getIsCheckInfiniteBullet();
 		BOOL isCheckInfiniteLife = controlVal.getIsCheckInfiniteLife();
+		BOOL isCheckInfiniteMoney = controlVal.getIsCheckInfiniteMoney();
 		BOOL isCheckAcce = controlVal.getIsCheckAcce();
 		BOOL isCheckInfiniteGrenade = controlVal.getIsCheckInfiniteGrenade();
 		UINT spiritBaseAddrValue = *((UINT *)SPIRIT_BASE_ADDRESS);
@@ -120,11 +121,25 @@ DWORD WINAPI HookThreadFunc(LPVOID lpPatameter) {
 				UINT lifeAddress;
 				lifeAddress = getLifeAddress();
 				FLOAT lifeValue = *((FLOAT *)(lifeAddress));//生命值
-				if (lifeValue < 100) {
-					*((FLOAT *)(lifeAddress)) = 100.0;
+				if (lifeValue < 200) {
+					*((FLOAT *)(lifeAddress)) = 244.0;
 					//char szBuf[1024] = { 0 };
 					//sprintf(szBuf, "生命值等于%f", lifeValue);
 					//MessageBox(NULL, szBuf, "DLL Inject", MB_OK);
+				}
+			}
+
+			if (isCheckInfiniteMoney) {//开启无限金币
+				UINT moneyOffsetOne = *((UINT *)(spiritBaseAddrValue + MONEY_OFFSET_ONE));
+				if (moneyOffsetOne != 0) {
+					UINT moneyAddress = moneyOffsetOne + MONEY_OFFSET_TWO;
+					if (moneyAddress != 0) {
+						UINT money = *((UINT *)(moneyAddress)); // 当前金币
+						if (money < 16000) {
+							*((UINT *)(moneyAddress)) = 99999;
+							*((UINT *)MONEY_ADDRESS_ADDITIONAL) = 99999;
+						}
+					}
 				}
 			}
 

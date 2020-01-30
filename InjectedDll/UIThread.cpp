@@ -68,14 +68,22 @@ LRESULT CALLBACK MainDialogProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM l
 				//sprintf(szBuf, "选中移动加速check box");
 				//MessageBox(NULL, szBuf, "DLL Inject", MB_OK);
 				controlVal.setIsCheckAcce(TRUE);
-			}
-			else {
+			} else {
 				controlVal.setIsCheckAcce(FALSE);
 			}
 			return TRUE;
 		case IDC_CHECK4:
 			sprintf(szBuf, "开发中...");
 			MessageBox(NULL, szBuf, "DLL Inject", MB_OK);
+			return TRUE;
+		case IDC_CHECK5:
+			checkHnd = GetDlgItem(hWnd, IDC_CHECK5);
+			ret = SendMessage(checkHnd, BM_GETCHECK, 0, 0);
+			if (BST_CHECKED == ret) {
+				controlVal.setIsCheckInfiniteMoney(TRUE);
+			}else {
+				controlVal.setIsCheckInfiniteMoney(FALSE);
+			}
 			return TRUE;
 		}
 		break;

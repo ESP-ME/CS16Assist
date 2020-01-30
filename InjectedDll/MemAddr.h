@@ -22,6 +22,10 @@
 //控制人物Z坐标的地址的偏移量
 #define Z_OFFSET 0x90
 
+//控制人物金币的地址的偏移量
+#define MONEY_OFFSET_ONE 0x7C
+#define MONEY_OFFSET_TWO 0x1CC
+#define MONEY_ADDRESS_ADDITIONAL 0x01A1B9FC
 
 
 

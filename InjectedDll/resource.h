@@ -7,6 +7,7 @@
 #define IDC_CHECK2                      1002
 #define IDC_CHECK3                      1003
 #define IDC_CHECK4                      1004
+#define IDC_CHECK5                      1005
 
 // Next default values for new objects
 // 
